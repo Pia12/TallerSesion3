@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Appium + Cucumber</td>
+        <td>1</td>
+      <td>14 Aug 2020, 21:33</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">BasicAppium.cierroContactManagerEnMiDispositivoCelular()</td>
+              <td>1</td>
+              <td class="duration" data-value="1160554400">1.160</td>
+              <td class="duration" data-value="1160554400">1.160</td>
+              <td class="duration" data-value="1160554400">1.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BasicAppium.hagoClickEnElBotonAgregarContactoEnContactManager()</td>
+              <td>4</td>
+              <td class="duration" data-value="960629425">0.960</td>
+              <td class="duration" data-value="960629425">1.002</td>
+              <td class="duration" data-value="3842517700">3.842</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BasicAppium.hagoClickEnElBotonOKEnElDiagloDeActualizar()</td>
+              <td>4</td>
+              <td class="duration" data-value="205042750">0.205</td>
+              <td class="duration" data-value="205042750">0.335</td>
+              <td class="duration" data-value="820171000">0.820</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BasicAppium.hagoClickEnElBotonSaveEnContacManager()</td>
+              <td>4</td>
+              <td class="duration" data-value="687769325">0.687</td>
+              <td class="duration" data-value="687769325">0.708</td>
+              <td class="duration" data-value="2751077300">2.751</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BasicAppium.llenoElTextboxContactNameConElValorAAABRemove(String,String)</td>
+              <td>12</td>
+              <td class="duration" data-value="1690664916">1.690</td>
+              <td class="duration" data-value="1690664916">2.872</td>
+              <td class="duration" data-value="20287979000">20.287</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BasicAppium.tengoAbiertoLaAplicacionContactManager()</td>
+              <td>4</td>
+              <td class="duration" data-value="13282750125">13.282</td>
+              <td class="duration" data-value="13282750125">15.051</td>
+              <td class="duration" data-value="53131000500">53.131</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BasicAppium.verificoQueElContactoAAABRemoveEsMostrado(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="2259488175">2.259</td>
+              <td class="duration" data-value="2259488175">2.478</td>
+              <td class="duration" data-value="9037952700">9.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefs.verificoQuePuedoIngresarALaPaginaPrincipal()</td>
+              <td>7</td>
+              <td class="duration" data-value="66757">0.000</td>
+              <td class="duration" data-value="66757">0.000</td>
+              <td class="duration" data-value="467300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefs.yoIngresoALaPaginaPrincipalEnFacebookCom(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="113714">0.000</td>
+              <td class="duration" data-value="113714">0.000</td>
+              <td class="duration" data-value="796000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefs.yoLlenoElUsuarioConCucumber(String,String)</td>
+              <td>21</td>
+              <td class="duration" data-value="224347">0.000</td>
+              <td class="duration" data-value="224347">0.001</td>
+              <td class="duration" data-value="4711300">0.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefs.yoTengoUnUsuarioAdministrador(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="18359157">0.018</td>
+              <td class="duration" data-value="18359157">0.127</td>
+              <td class="duration" data-value="128514100">0.128</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.cierroWhenDoEnMiDispositivoCelular()</td>
+              <td>7</td>
+              <td class="duration" data-value="995719657">0.995</td>
+              <td class="duration" data-value="995719657">1.099</td>
+              <td class="duration" data-value="6970037600">6.970</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.hagoTabEnElBotonDeLaParteInferiorDeLaLista()</td>
+              <td>7</td>
+              <td class="duration" data-value="495799571">0.495</td>
+              <td class="duration" data-value="495799571">0.517</td>
+              <td class="duration" data-value="3470597000">3.470</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.hagoTabEnElBotonGuardarEnPantallaMiLista()</td>
+              <td>7</td>
+              <td class="duration" data-value="641889614">0.641</td>
+              <td class="duration" data-value="641889614">0.648</td>
+              <td class="duration" data-value="4493227300">4.493</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.llenoElTextboxTituloConElValorTaller(String,String)</td>
+              <td>14</td>
+              <td class="duration" data-value="1314469835">1.314</td>
+              <td class="duration" data-value="1314469835">1.952</td>
+              <td class="duration" data-value="18402577700">18.402</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.tengoAbiertaLaAplicacionWhenDo()</td>
+              <td>7</td>
+              <td class="duration" data-value="13089963600">13.089</td>
+              <td class="duration" data-value="13089963600">14.847</td>
+              <td class="duration" data-value="91629745200">1:31.629</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.verificoQueElTituloTallerEsMostrado(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="1172218971">1.172</td>
+              <td class="duration" data-value="1172218971">1.267</td>
+              <td class="duration" data-value="8205532800">8.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyStepdefsWhenDo.verificoQueLaNotaContenidoTallerEsMostrado(String)</td>
+              <td>7</td>
+              <td class="duration" data-value="769926742">0.769</td>
+              <td class="duration" data-value="769926742">1.241</td>
+              <td class="duration" data-value="5389487200">5.389</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Runner.afterCucumber()</td>
+              <td>18</td>
+              <td class="duration" data-value="109550">0.000</td>
+              <td class="duration" data-value="109550">0.000</td>
+              <td class="duration" data-value="1971900">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Runner.beforeCucumber()</td>
+              <td>18</td>
+              <td class="duration" data-value="145316">0.000</td>
+              <td class="duration" data-value="145316">0.001</td>
+              <td class="duration" data-value="2615700">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>20</td>
+            <td>167</td>
+            <td class="duration">1.375</td>
+            <td class="duration">1:31.629</td>
+            <td class="duration">3:49.731</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
